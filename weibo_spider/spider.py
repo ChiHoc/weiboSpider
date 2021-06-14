@@ -10,6 +10,7 @@ import shutil
 import sys
 from datetime import date, datetime, timedelta
 from time import sleep
+from subprocess import call
 
 from absl import app, flags
 from tqdm import tqdm
@@ -309,6 +310,9 @@ class Spider:
                 logger.info(u'共爬取' + str(self.got_num) + u'条微博')
             else:
                 logger.info(u'共爬取' + str(self.got_num) + u'条原创微博')
+            if self.got_num:
+                cmd = 'display notification \"' + u'新增' + str(self.got_num) + u'条微博' + '\" with title \"' + "微博爬虫" + '\"'
+                call(["osascript", "-e", cmd])
             logger.info(u'信息抓取完毕')
             logger.info('*' * 100)
         except Exception as e:
