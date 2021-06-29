@@ -91,6 +91,7 @@ class SqliteWriter(Writer):
                 id varchar(20) NOT NULL,
                 nickname varchar(30),
                 gender varchar(10),
+                avatar varchar(200),
                 location varchar(200),
                 birthday varchar(40),
                 description varchar(400),

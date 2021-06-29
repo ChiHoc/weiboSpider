@@ -25,6 +25,7 @@ class InfoParser(Parser):
                 sys.exit()
             user.nickname = nickname
 
+            user.avatar = self.selector.xpath("//div[@class='c'][1]/img[@alt='头像']/@src")
             basic_info = self.selector.xpath("//div[@class='c'][3]/text()")
             zh_list = [u'性别', u'地区', u'生日', u'简介', u'认证', u'达人']
             en_list = [

@@ -5,6 +5,7 @@ class User:
         self.nickname = ''
 
         self.gender = ''
+        self.avatar = ''
         self.location = ''
         self.birthday = ''
         self.description = ''
@@ -22,6 +23,7 @@ class User:
         """打印微博用户信息"""
         result = ''
         result += u'用户昵称: %s\n' % self.nickname
+        result += u'用户头像: %s\n' % self.avatar
         result += u'用户id: %s\n' % self.id
         result += u'微博数: %d\n' % self.weibo_num
         result += u'关注数: %d\n' % self.following

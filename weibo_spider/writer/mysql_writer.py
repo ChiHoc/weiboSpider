@@ -122,6 +122,7 @@ class MySqlWriter(Writer):
                     CREATE TABLE IF NOT EXISTS user (
                     id varchar(20) NOT NULL,
                     nickname varchar(30),
+                    avatar varchar(200),
                     gender varchar(10),
                     location varchar(200),
                     birthday varchar(40),
