@@ -324,6 +324,8 @@ class Spider:
             if not self.user_config_list:
                 logger.info(
                     u'没有配置有效的user_id，请通过config.json或user_id_list.txt配置user_id')
+                cmd = 'display notification \"' + u'没有配置有效的user_id，请通过config.json或user_id_list.txt配置user_id' + '\" with title \"' + "微博爬虫" + '\"'
+                call(["osascript", "-e", cmd])
                 return
             user_count = 0
             user_count1 = random.randint(*self.random_wait_pages)
